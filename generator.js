@@ -17,32 +17,32 @@ const positiveThirdF = ["Naposled to říkala ", "Myslím, že to říkala i ","
 const positiveThirdM = ["Naposled to říkal ", "Myslím, že to říkal i "," To v hospodě často křičí ", "Hlavně to při šukání prej říká ","Podobnou úchylku má "];
 
 function positiveResult(){
-    let idx = Math.floor((Math.random() * (positiveStart.length-1)) + 1);
+    let idx = Math.floor((Math.random() * positiveStart.length));
     let result = positiveStart[idx];
 
-    idx = Math.floor((Math.random() * (positiveSecond.length-1)) + 1);
+    idx = Math.floor((Math.random() * positiveSecond.length));
     result = result + positiveSecond[idx];
 
     const man = Math.floor((Math.random()*2) +1);
     if(man === 1){
-        idx = Math.floor((Math.random() * (positiveThirdM.length-1)) + 1);
+        idx = Math.floor((Math.random() * positiveThirdM.length));
         result = result + positiveThirdM[idx];
-        idx = Math.floor((Math.random() * (namesM.length-1)) + 1);
+        idx = Math.floor((Math.random() * namesM.length));
         result = result + namesM[idx];
     } else {
-        idx = Math.floor((Math.random() * (positiveThirdF.length-1)) + 1);
+        idx = Math.floor((Math.random() * positiveThirdF.length));
         result = result + positiveThirdF[idx];
-        idx = Math.floor((Math.random() * (namesF.length-1)) + 1);
+        idx = Math.floor((Math.random() * namesF.length));
         result = result + namesF[idx];
     }
     return result;
 }
 
 function negativeResault(){
-    let idx = Math.floor((Math.random() * (negativeStart.length-1)) + 1);
+    let idx = Math.floor((Math.random() * negativeStart.length));
     let result = negativeStart[idx];
 
-    idx = Math.floor((Math.random() * (negativeCore.length-1)) + 1);
+    idx = Math.floor((Math.random() * negativeCore.length));
     result = result + negativeCore[idx];
     return result;
 }
