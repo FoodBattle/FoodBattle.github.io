@@ -23,7 +23,7 @@ function positiveResult(){
     idx = Math.floor((Math.random() * (positiveSecond.length-1)) + 1);
     result = result + positiveSecond[idx];
 
-    const man = Math.floor((Math.random()) + 1);
+    const man = Math.floor((Math.random()*2) +1);
     if(man === 1){
         idx = Math.floor((Math.random() * (positiveThirdM.length-1)) + 1);
         result = result + positiveThirdM[idx];
